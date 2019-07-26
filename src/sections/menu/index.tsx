@@ -1,29 +1,31 @@
 import React, {useState} from "react"
-import "./style.css"
-
+import {RouteComponentProps, withRouter} from "react-router";
 import {Menu, MenuItemProps} from "semantic-ui-react"
+import "./style.css"
 
 // @ts-ignore
 const rightMenuItems: Array<MenuItemProps> = [
-    {key: "home", name: "ראשי"},
-    {key: "about", name: "אודות"},
-    {key: "events", name: "אירועים"},
-    {key: "contact-us", position: 'right', name: "צרו קשר"}
+    {key: "home", path: 'home', name: "ראשי"},
+    {key: "about", path: 'about', name: "אודות"},
+    {key: "events", path: 'events', name: "אירועים"},
+    {key: "contact-us", path: 'contact', position: 'right', name: "צרו קשר"}
 ].reverse(), leftMenuItems: Array<MenuItemProps> = [
     {key: 'instagram', inverted: true, icon: 'instagram'}
 ];
 
 const menuItems: Array<MenuItemProps> = [...leftMenuItems, ...rightMenuItems];
 
-const MainMenu = () => {
+const MainMenu = (props: RouteComponentProps) => {
     const [selected, setSelected] = useState(menuItems.length-1);
 
     const onItemClick = (event: any, data: MenuItemProps) => {
         if (data.index === 0 || data.index) {
-            setSelected(data.index)
+            setSelected(data.index);
+            if (data.path) props.history.push(data.path)
         }
     };
-    return <Menu borderless
+    return <Menu  attached={"top"}
+                  borderless
                   onItemClick={onItemClick}
                   fluid activeIndex={selected}
                   items={menuItems}
@@ -31,4 +33,4 @@ const MainMenu = () => {
 
 };
 
-export default MainMenu;
+export default withRouter(MainMenu);
