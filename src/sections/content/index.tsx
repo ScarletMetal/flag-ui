@@ -5,7 +5,7 @@ import {PageRoutes} from "../../pages";
 
 export default () => {
     return <Segment className={"seamless-segment"}>
-        <div className={"content"}>
+        <div className={"content-section"}>
             <div className={"page-parent"}>
                 <PageRoutes/>
             </div>
