@@ -1,0 +1,16 @@
+.video-wall-item {
+    text-align: center;
+    flex-basis: auto;
+    margin: 0.5vh 0.5vw 0.5vh !important;
+    padding: 0 !important;
+    width: 25vw;
+}
+
+.video-wall-item .video-wall-icon {
+    width: 100%;
+    height: auto;
+}
+
+.video-wall-item .video-wall-label {
+    width:100%;
+}
