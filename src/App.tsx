@@ -6,13 +6,16 @@ import './App.css';
 
 import 'semantic-ui-css/semantic.min.css'
 import {BrowserRouter} from "react-router-dom";
+import {SegmentGroup} from "semantic-ui-react";
 
 const App = () => {
   return <BrowserRouter>
     <div className={"application"}>
-      <Header/>
-      <Menu/>
-      <Content/>
+      <SegmentGroup>
+        <Header/>
+        <Menu/>
+        <Content/>
+      </SegmentGroup>
     </div>
   </BrowserRouter>;
 };
