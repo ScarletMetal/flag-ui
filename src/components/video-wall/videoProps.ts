@@ -1,4 +1,4 @@
-export interface Video {
+export interface VideoProps {
     videoId: string,
     title: string,
 

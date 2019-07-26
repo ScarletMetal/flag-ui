@@ -1,11 +1,12 @@
-import React from "react"
+import React, {useState} from "react"
 import "./style.css"
 import {VideoWallItem} from "./item";
-import {Video} from "./video";
+import {VideoProps} from "./videoProps";
+import {VideoModal} from "./modal";
 
 
 export interface VideoWallProps {
-    items: Array<Video>
+    items: Array<VideoProps>
 }
 
 export const VideoWall = (props: VideoWallProps) => {
