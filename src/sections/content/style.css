@@ -1,7 +1,7 @@
 .content {
     text-align: center;
+    min-height: 100vh;
     height: auto;
-    min-height: 100%;
     width: 100%;
     background-color: #0f468e;
     margin-top: 0;
@@ -12,6 +12,7 @@
 .content .page-parent {
     width: 90vw;
     height: 100%;
+    min-height: 100vh;
     display: inline-block;
     background-color: white;
     margin-top: 5vh;
