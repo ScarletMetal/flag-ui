@@ -6,7 +6,8 @@ import {VideoProps} from "../../components/video-wall/videoProps";
 const demoVideos : Array<VideoProps> = [
     {videoId: 'hqnTgpN2U_c', title: 'Rita #3388'},
     {videoId: 'o7XsimZs6pU', title: 'Shavit #5951'},
-    {videoId: 'zp17V9l7l_w', title: 'Eden #2212'}
+    {videoId: 'zp17V9l7l_w', title: 'Eden #2212'},
+    {videoId: 'OYNPeVF588k', title: 'Inbal #2212'}
 ];
 
 export const HomePage = () => {
